@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Attack on Titan",
+    "image": "assets/media/thumbnail/trending/attackontitan.jpg",
+    "link": "details.php?anime=Attack on Titans",
+    "episodes": "89/4",
+    "category": "Thriller"
+  },
+  {
+    "title": "Demon Slayer",
+    "image": "assets/media/thumbnail/trending/demonslayer.jpg",
+    "link": "details.php?anime=Demon Slayer",
+    "episodes": "55/4",
+    "category": "Fiction"
+  },
+  {
+    "title": "Dr Stone",
+    "image": "assets/media/thumbnail/trending/drstone.jpeg",
+    "link": "details.php?anime=DrStone",
+    "episodes": "55/3",
+    "category": "unknown"
+  },
+  {
+    "title": "No Game No Life",
+    "image": "assets/media/thumbnail/trending/nogamenolife.jpg",
+    "link": "details.php?anime=No Game No Life",
+    "episodes": "12/1",
+    "category": "Fiction"
+  },
+  {
+    "title": "Death Note",
+    "image": "assets/media/thumbnail/trending/deathnote.jpg",
+    "link": "details.php?anime=Death Note",
+    "episodes": "37/1",
+    "category": "Thriller"
+  }
+]

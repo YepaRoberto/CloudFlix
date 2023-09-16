@@ -1,0 +1,36 @@
+[{
+    "title": "Attack on Titan",
+    "genre": "Action",
+    "description": "The story of Eren Yeager, his adopted sister Mikasa Ackerman, and their friend Armin Arlert...",
+    "image": "assets/media/hero/attackontitan.jpg"
+},
+    {
+        "title": "Naruto",
+        "genre": "Action",
+        "description": "The story of Naruto Uzumaki, a young ninja who seeks recognition from his peers...",
+        "image": "assets/media/hero/naruto.jpg"
+    },
+    {
+        "title": "Death Note",
+        "genre": "Mystery",
+        "description": "The story of Light Yagami, a high school student who discovers a supernatural notebook...",
+        "image": "assets/media/hero/deathnote.jpg"
+    },
+    {
+        "title": "Fullmetal Alchemist: Brotherhood",
+        "genre": "Adventure",
+        "description": "The story of two brothers, Edward and Alphonse Elric, who use alchemy to bring back their deceased mother...",
+        "image": "assets/media/hero/FAB.jpg"
+    },
+    {
+        "title": "One Piece",
+        "genre": "Adventure",
+        "description": "The story of Monkey D. Luffy, a young pirate with the power to stretch his body like rubber...",
+        "image": "assets/media/hero/onepiece.jpg"
+    },
+    {
+        "title": "Sword Art Online",
+        "genre": "Fantasy",
+        "description": "The story of Kirito, a beta tester for a virtual reality MMORPG called Sword Art Online...",
+        "image": "assets/media/hero/SAO.jpg"
+    }]
