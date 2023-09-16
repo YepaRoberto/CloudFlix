@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id'])) {
     $users_json = file_get_contents('./db/users.json');
     $users = json_decode($users_json, true);
     $avatar = $users[$user_id]['avatar'];
-    echo '<div class="col-2 col-lg-12" style="display: inline-block; align-items: center; margin-right: 5px; margin-bottom: 3px;"><a href="./user/index.php"><img class="rounded-circle img-fluid" style="max-width: 35px;" src="' . $avatar . '" alt="Avatar"></a></div>';
+    echo '<div class="col-2 col-lg-1" style="display: inline-block; align-items: center; margin-right: 5px; margin-bottom: 3px;"><a href="./user/index.php"><img class="rounded-circle img-fluid" style="max-width: 35px;" src="' . $avatar . '" alt="Avatar"></a></div>';
 } else {
     // User is not logged in, display login icon and link to login page
     echo '<a href="./login.html"><span class="icon_profile"></span></a>';
