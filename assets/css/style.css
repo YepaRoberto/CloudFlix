@@ -459,6 +459,7 @@ ol {
 .hero__text {
 	position: relative;
 	z-index: 9;
+    text-shadow: 0 0 3px black;
 }
 
 .hero__text .label {
