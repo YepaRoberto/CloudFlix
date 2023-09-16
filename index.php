@@ -640,63 +640,38 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                            <div class="product__sidebar__comment">
-                                <div class="section-title">
-                                    <h5>New Comment</h5>
-                                </div>
-                                <div class="product__sidebar__comment__item">
-                                    <div class="product__sidebar__comment__item__pic">
-                                        <img src="img/sidebar/comment-1.jpg" alt="">
-                                    </div>
-                                    <div class="product__sidebar__comment__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                        <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                                    </div>
-                                </div>
-                                <div class="product__sidebar__comment__item">
-                                    <div class="product__sidebar__comment__item__pic">
-                                        <img src="img/sidebar/comment-2.jpg" alt="">
-                                    </div>
-                                    <div class="product__sidebar__comment__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                                        <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                                    </div>
-                                </div>
-                                <div class="product__sidebar__comment__item">
-                                    <div class="product__sidebar__comment__item__pic">
-                                        <img src="img/sidebar/comment-3.jpg" alt="">
-                                    </div>
-                                    <div class="product__sidebar__comment__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                                        <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                                    </div>
-                                </div>
-                                <div class="product__sidebar__comment__item">
-                                    <div class="product__sidebar__comment__item__pic">
-                                        <img src="img/sidebar/comment-4.jpg" alt="">
-                                    </div>
-                                    <div class="product__sidebar__comment__item__text">
-                                        <ul>
-                                            <li>Active</li>
-                                            <li>Movie</li>
-                                        </ul>
-                                        <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                                        <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                                    </div>
-                                </div>
-                            </div>
+<div class="product__sidebar__comment">
+    <div class="section-title">
+        <h5>New Comment</h5>
+    </div>
+    <?php
+    // Lee el archivo JSON de blogs
+    $json = file_get_contents('db/blogs.json');
+    $data = json_decode($json, true);
+
+    // Obtén los últimos 4 blogs
+    $lastFourBlogs = array_slice($data['blogs'], -4);
+
+    // Muestra los blogs en el formato proporcionado
+    foreach ($lastFourBlogs as $blog) {
+        echo '<div class="product__sidebar__comment__item">';
+        echo '<div class="product__sidebar__comment__item__pic">';
+        echo '<img class="col-md-4 col-sm-4 col-lg-12" src="' . $blog['banner'] . '" alt="">';
+        echo '</div>';
+        echo '<div class="product__sidebar__comment__item__text">';
+        echo '<ul>';
+        echo '<li>' . $blog['anime'] . '</li>';
+        foreach ($blog['tags'] as $tag) {
+            echo '<li>' . $tag . '</li>';
+        }
+        echo '</ul>';
+        echo '<h5><a href="#">' . $blog['title'] . '</a></h5>';
+        echo '<span><i class="fa fa-eye"></i> ' . $blog['views'] . '</span>';
+        echo '</div>';
+        echo '</div>';
+    }
+    ?>
+</div>
                         </div>
                     </div>
                 </div>
