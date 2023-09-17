@@ -126,26 +126,50 @@ session_start();
                     echo '  </div>
                     </div>';
                     ?>
-<?php
-if (isset($_SESSION['user_id'])) {
-    // User is logged in, display avatar and link to user page
-    $user_id = $_SESSION['user_id'];
-    $users_json = file_get_contents('./db/users.json');
-    $users = json_decode($users_json, true);
-    $avatar = $users[$user_id]['avatar'];
-    $age = $users[$user_id]['age'];
-    $gender = $users[$user_id]['gender'];
-    // Rest of the code to recommend animes based on age and gender
-}
-?>
-<?php
+                    <?php
+                    if (isset($_SESSION['user_id'])) {
+                        // User is logged in, display avatar and link to user page
+                        $user_id = $_SESSION['user_id'];
+                        $users_json = file_get_contents('./db/users.json');
+                        $users = json_decode($users_json, true);
+                        $avatar = $users[$user_id]['avatar'];
+                        $age = $users[$user_id]['age'];
+                        $gender = $users[$user_id]['gender'];
+                        // Rest of the code to recommend animes based on age and gender
+                    }
+                    ?>
+                    <?php
 // Leer el archivo JSON
 $json = file_get_contents('./db/detailsDB.json');
 
 // Decodificar el archivo JSON en un array de PHP
 $data = json_decode($json, true);
 
-// Mostrar los datos en la estructura HTML dada
+// Obtener los valores de $age y $gender (suponiendo que los obtienes de alguna manera)
+$age = $_GET['age'];
+$gender = $_GET['gender'];
+
+// Función de comparación para ordenar los animes por coincidencia
+function compareAnimes($a, $b) {
+    return $b['coincidence'] - $a['coincidence'];
+}
+
+// Calcular la coincidencia de cada anime con los valores de $age y $gender
+foreach ($data as &$anime) {
+    $coincidence = 0;
+    if ($anime['obAge'] == $age) {
+        $coincidence += 2;
+    }
+    if ($anime['obGender'] == $gender) {
+        $coincidence += 1;
+    }
+    $anime['coincidence'] = $coincidence;
+}
+
+// Ordenar los animes por coincidencia
+usort($data, 'compareAnimes');
+
+// Mostrar los 5 animes con mayor coincidencia en la estructura HTML dada
 echo '<div class="trending__product">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8">
@@ -160,137 +184,136 @@ echo '<div class="trending__product">
             </div>
         </div>
         <div class="row">';
-
-// Iterar sobre los datos y mostrarlos en la estructura HTML dada
-foreach ($data as $key => $value) {
-    if ($key >= 5) {
-        break;
+$count = 0;
+foreach ($data as $anime) {
+    if ($anime['coincidence'] > 0) {
+        echo '<div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="' . $anime['image'] . '">
+                        <div class="ep">' . $anime['episodes'] . '</div>
+                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                    </div>
+                    <div class="product__item__text">
+                        <ul>
+                            <li>Active</li>
+                            <li>' . $anime['category'] . '</li>
+                        </ul>
+                        <h5><a href="' . $anime['link'] . '">Ver ' . $anime['title'] . '</a></h5>
+                    </div>
+                </div>
+            </div>';
+        $count++;
+        if ($count >= 5) {
+            break;
+        }
     }
-    echo '<div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="' . $value['image'] . '">
-                    <div class="ep">' . $value['episodes'] . '</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>' . $value['category'] . '</li>
-                    </ul>
-                    <h5><a href="' . $value['link'] . '">Ver ' . $value['title'] . '</a></h5>
-                </div>
-            </div>
-        </div>';
 }
-
 echo '</div></div>';
-?>
+                    ?>
                     <!-- trending Area end -->
 
-
-
-                            <div class="product__sidebar__comment">
-                                <div class="section-title">
-                                    <h5>New Blogs</h5>
-                                </div>
-                                <?php
-                                // Lee el archivo JSON de blogs
-                                $json = file_get_contents('db/blogs.json');
-                                $data = json_decode($json, true);
-
-                                // ObtÃ©n los Ãºltimos 4 blogs
-                                $lastFourBlogs = array_slice($data['blogs'], -4);
-
-                                // Muestra los blogs en el formato proporcionado
-                                foreach ($lastFourBlogs as $blog) {
-                                    echo '<div class="product__sidebar__comment__item">';
-                                    echo '<div class="product__sidebar__comment__item__pic">';
-                                    echo '<img class="col-md-12 col-sm-12 col-lg-12" src="' . $blog['banner'] . '" alt="">';
-                                    echo '</div>';
-                                    echo '<div class="product__sidebar__comment__item__text">';
-                                    echo '<ul>';
-                                    echo '<li>' . $blog['anime'] . '</li>';
-                                    foreach ($blog['tags'] as $tag) {
-                                        echo '<li>' . $tag . '</li>';
-                                    }
-                                    echo '</ul>';
-                                    echo '<h5><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h5>';
-                                    echo '<span><i class="fa fa-clock-o"></i> ' . $blog['time'] . '</span>';
-                                    echo '</div>';
-                                    echo '</div>';
-                                }
-                                ?>
-                            </div>
+                    <div class="product__sidebar__comment">
+                        <div class="section-title">
+                            <h5>New Blogs</h5>
                         </div>
+                        <?php
+                        // Lee el archivo JSON de blogs
+                        $json = file_get_contents('db/blogs.json');
+                        $data = json_decode($json, true);
+
+                        // ObtÃ©n los Ãºltimos 4 blogs
+                        $lastFourBlogs = array_slice($data['blogs'], -4);
+
+                        // Muestra los blogs en el formato proporcionado
+                        foreach ($lastFourBlogs as $blog) {
+                            echo '<div class="product__sidebar__comment__item">';
+                            echo '<div class="product__sidebar__comment__item__pic">';
+                            echo '<img class="col-md-12 col-sm-12 col-lg-12" src="' . $blog['banner'] . '" alt="">';
+                            echo '</div>';
+                            echo '<div class="product__sidebar__comment__item__text">';
+                            echo '<ul>';
+                            echo '<li>' . $blog['anime'] . '</li>';
+                            foreach ($blog['tags'] as $tag) {
+                                echo '<li>' . $tag . '</li>';
+                            }
+                            echo '</ul>';
+                            echo '<h5><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h5>';
+                            echo '<span><i class="fa fa-clock-o"></i> ' . $blog['time'] . '</span>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        ?>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Product Section End -->
-
-        <!-- Footer Section Begin -->
-        <footer class="footer">
-            <div class="page-up">
-                <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="footer__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer__nav">
-                            <ul>
-                                <li class="active"><a href="./index.html">Homepage</a></li>
-                                <li><a href="./categories.html">Categories</a></li>
-                                <li><a href="./blog.html">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer Section End -->
-
-        <!-- Search model Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">
-                    <i class="icon_close"></i>
-                </div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
-                </form>
             </div>
         </div>
-        <!-- Search model end -->
+    </div>
+</section>
+<!-- Product Section End -->
 
-        <!-- Js Plugins -->
-        <script src="assets/js/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/player.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/mixitup.min.js"></script>
-        <script src="assets/js/jquery.slicknav.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/main.js"></script>
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="page-up">
+        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="footer__logo">
+                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="footer__nav">
+                    <ul>
+                        <li class="active"><a href="./index.html">Homepage</a></li>
+                        <li><a href="./categories.html">Categories</a></li>
+                        <li><a href="./blog.html">Our Blog</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Search model Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">
+            <i class="icon_close"></i>
+        </div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here.....">
+        </form>
+    </div>
+</div>
+<!-- Search model end -->
+
+<!-- Js Plugins -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/js/jquery.slicknav.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 
-    </body>
+</body>
 
 </html>
