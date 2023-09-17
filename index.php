@@ -130,154 +130,68 @@ session_start();
                         <!-- trending Area end -->
 
 
-                        <div class="popular__product">
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <div class="section-title">
-                                        <h4>Popular Shows</h4>
+                      <?php
+
+// Leer los archivos JSON
+$data = file_get_contents('db/detailsDB.json');
+
+// Decodificar los archivos JSON en arrays de PHP
+$data = json_decode($details, true);
+
+// Obtener la edad y el género del usuario
+$age = 25;
+$gender = "Female";
+
+// Crear un array vacío para almacenar los animes coincidentes
+$animes = [];
+
+// Iterar sobre los datos de anime
+foreach ($data as $key => $value) {
+
+    // Obtener el público objetivo del anime
+    $obGender = $value['obGender'];
+    $obAge = $value['obAge'];
+
+    // Calcular la puntuación de coincidencia
+    $score = ($obGender == $gender) ? 5 : 0;
+    $score += ($obAge == $age) ? 5 : 0;
+
+    // Agregar el anime al array de animes coincidentes
+    if ($score > 0) {
+        $animes[] = $value;
+    }
+}
+
+// Ordenar el array de animes coincidentes por puntuación
+usort($animes, function ($a, $b) {
+    return $a['score'] > $b['score'];
+});
+
+// Obtener los 5 animes coincidentes más altos
+$animes = array_slice($animes, 0, 5);
+
+// Mostrar los animes coincidentes
+foreach ($animes as $key => $value) {
+    echo '<div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="' . $value['image'] . '">
+                                        <div class="ep">' . $value['episodes'] . '</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                    <li>' . $value['category'] . '</li>
+                                        </ul>
+                                        <h5><a href="' . $value['link'] . '">Ver ' . $value['title'] . '</a></h5>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4">
-                                    <div class="btn__all">
-                                        <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-1.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-2.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-3.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-4.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-5.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="img/popular/popular-6.jpg">
-                                            <div class="ep">
-                                                18 / 18
-                                            </div>
-                                            <div class="comment">
-                                                <i class="fa fa-comments"></i> 11
-                                            </div>
-                                            <div class="view">
-                                                <i class="fa fa-eye"></i> 9141
-                                            </div>
-                                        </div>
-                                        <div class="product__item__text">
-                                            <ul>
-                                                <li>Active</li>
-                                                <li>Movie</li>
-                                            </ul>
-                                            <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </div>';
+}
+
+?>
+
                         <div class="recent__product">
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8">
@@ -642,21 +556,21 @@ session_start();
                             </div>
 <div class="product__sidebar__comment">
     <div class="section-title">
-        <h5>New Comment</h5>
+        <h5>New Blogs</h5>
     </div>
     <?php
     // Lee el archivo JSON de blogs
     $json = file_get_contents('db/blogs.json');
     $data = json_decode($json, true);
 
-    // ObtÃ©n los Ãºltimos 4 blogs
+    // ObtÃƒÂ©n los ÃƒÂºltimos 4 blogs
     $lastFourBlogs = array_slice($data['blogs'], -4);
 
     // Muestra los blogs en el formato proporcionado
     foreach ($lastFourBlogs as $blog) {
         echo '<div class="product__sidebar__comment__item">';
         echo '<div class="product__sidebar__comment__item__pic">';
-        echo '<img class="col-md-4 col-sm-4 col-lg-12" src="' . $blog['banner'] . '" alt="">';
+        echo '<img class="col-md-12 col-sm-12 col-lg-12" src="' . $blog['banner'] . '" alt="">';
         echo '</div>';
         echo '<div class="product__sidebar__comment__item__text">';
         echo '<ul>';
@@ -665,8 +579,8 @@ session_start();
             echo '<li>' . $tag . '</li>';
         }
         echo '</ul>';
-        echo '<h5><a href="#">' . $blog['title'] . '</a></h5>';
-        echo '<span><i class="fa fa-eye"></i> ' . $blog['views'] . '</span>';
+        echo '<h5><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h5>';
+        echo '<span><i class="fa fa-clock-o"></i> ' . $blog['time'] . '</span>';
         echo '</div>';
         echo '</div>';
     }
