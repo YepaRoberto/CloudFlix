@@ -833,7 +833,7 @@ ol {
 }
 
 .product__sidebar__comment__item__text {
-	overflow: hidden;
+	
 }
 
 .product__sidebar__comment__item__text ul {
@@ -1347,9 +1347,13 @@ ol {
 	justify-content: center;
 }
 
+ .normal__breadcrumb__text {
+   text-shadow: 0 0 4px black;
+}
+
 .normal__breadcrumb__text h2 {
 	color: #ffffff;
-	font-size: 48px;
+ 	font-size: 48px;
 	font-family: "Oswald", sans-serif;
 	font-weight: 700;
 	margin-bottom: 22px;
@@ -1392,6 +1396,7 @@ ol {
 
 .blog__item.small__item .blog__item__text h4 a {
 	font-size: 20px;
+    text-shadow: 0 0 3px black;
 	line-height: 30px;
 }
 
@@ -1402,6 +1407,7 @@ ol {
 	text-align: center;
 	width: 100%;
 	padding: 0 105px;
+   text-shadow: 0 0 4px black;
 }
 
 .blog__item__text p {
