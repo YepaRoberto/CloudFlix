@@ -90,7 +90,7 @@ foreach (array_slice($blogs, 0, 4) as $blog) {
         <div class="blog__item set-bg" data-setbg="' . $blog['banner'] . '">
             <div class="blog__item__text">
                 <p><span class="icon_calendar"></span>' . date('jS F Y', strtotime($blog['time'])) . '</p>
-                <h4><a href="#">' . $blog['title'] . '</a></h4>
+                <h4><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h4>
             </div>
         </div>
     </div>';
@@ -114,7 +114,7 @@ foreach (array_slice($blogs, 4, 4) as $blog) {
         <div class="blog__item small__item set-bg" data-setbg="' . $blog['banner'] . '">
             <div class="blog__item__text">
                 <p><span class="icon_calendar"></span>' . date('jS F Y', strtotime($blog['time'])) . '</p>
-                <h4><a href="blog/?id=' . $blog['id'] . '">' . $blog['title'] . '</a></h4>
+                <h4><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h4>
             </div>
         </div>
     </div>';
