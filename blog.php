@@ -44,7 +44,7 @@ session_start();
                 <div class="col-lg-12 text-center">
                     <div class="normal__breadcrumb__text">
                         <h2>Our Blog</h2>
-                        <p>Welcome to the official Anime blog.</p>
+                        <p>Welcome to the official Anime blog.</p>
                     </div>
                 </div>
             </div>
@@ -78,15 +78,31 @@ echo '<div class="container">';
 // Open the row div
 echo '<div class="row">';
 
-// Open the col-lg-6 div
-echo '<div class="col-lg-6">';
+// Initialize a counter to track the remainder
+$counter = 0;
 
-// Open the row div
-echo '<div class="row">';
+// Loop through the blogs and display them
+foreach ($blogs as $blog) {
 
-// Loop through the first set of blogs and display them
-foreach (array_slice($blogs, 0, 4) as $blog) {
-    echo '<div class="col-lg-12">
+    // Increment the counter
+    $counter++;
+
+    // Determine the CSS class for the blog item based on the remainder
+    $css_class = '';
+    switch ($counter % 8) {
+        case 0:
+            $css_class = 'col-lg-12';
+            break;
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            $css_class = 'col-md-6 col-sm-6';
+            break;
+    }
+
+    // Echo the blog item
+    echo '<div class="' . $css_class . '">
         <div class="blog__item set-bg" data-setbg="' . $blog['banner'] . '">
             <div class="blog__item__text">
                 <p><span class="icon_calendar"></span>' . date('jS F Y', strtotime($blog['time'])) . '</p>
@@ -95,36 +111,6 @@ foreach (array_slice($blogs, 0, 4) as $blog) {
         </div>
     </div>';
 }
-
-// Close the row div
-echo '</div>';
-
-// Close the col-lg-6 div
-echo '</div>';
-
-// Open the col-lg-6 div
-echo '<div class="col-lg-6">';
-
-// Open the row div
-echo '<div class="row">';
-
-// Loop through the second set of blogs and display them
-foreach (array_slice($blogs, 4, 4) as $blog) {
-    echo '<div class="col-lg-6 col-md-6 col-sm-6">
-        <div class="blog__item small__item set-bg" data-setbg="' . $blog['banner'] . '">
-            <div class="blog__item__text">
-                <p><span class="icon_calendar"></span>' . date('jS F Y', strtotime($blog['time'])) . '</p>
-                <h4><a href="blog/index.php?id=' . $blog['blog-id'] . '">' . $blog['title'] . '</a></h4>
-            </div>
-        </div>
-    </div>';
-}
-
-// Close the row div
-echo '</div>';
-
-// Close the col-lg-6 div
-echo '</div>';
 
 // Close the row div
 echo '</div>';
