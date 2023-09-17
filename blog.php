@@ -91,12 +91,15 @@ foreach ($blogs as $blog) {
     $css_class = '';
     switch ($counter % 8) {
         case 0:
+        case 5:
             $css_class = 'col-lg-12';
             break;
         case 1:
         case 2:
         case 3:
         case 4:
+        case 6:
+        case 7:
             $css_class = 'col-md-6 col-sm-6';
             break;
     }
