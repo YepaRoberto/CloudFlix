@@ -1,35 +1,21 @@
 {
-    "blogs": [
-{
-    "blog-id": 1,
-    "title": "Bienvenido A: CloudFlix",
-    "anime": "#Anime",
-    "tags": [
-        "#CloudFlix",
-        "#Estreno",
-        "#Streaming"
-    ],
-    "time": "13th SEPTEMBER, 2023",
-    "author": "Perplexity AI",
-    "banner": "assets/media/blogs/bd-1.png",
-    "content": "CloudFlix es una plataforma de streaming de anime que acaba de estrenarse y que está causando sensación en todo el mundo. Con más de 1.000 títulos disponibles, CloudFlix es el lugar perfecto para los fanáticos del anime que quieren ver sus series favoritas en línea.\n\nLa plataforma ofrece una amplia variedad de géneros, desde acción y aventura hasta romance y comedia. Además, CloudFlix cuenta con una comunidad de fanáticos muy activa que comparte sus opiniones y recomendaciones sobre las series más populares.\n\nLa calidad de la animación en CloudFlix es excelente y la plataforma ofrece subtítulos en varios idiomas para que los fanáticos de todo el mundo puedan disfrutar de sus series favoritas. Además, CloudFlix está disponible en múltiples dispositivos, como computadoras, teléfonos inteligentes y televisores inteligentes.\n\nEn resumen, si eres fanático del anime, ¡no puedes perderte CloudFlix! Regístrate ahora y comienza a disfrutar de tus series favoritas en línea."
-},
+    "blogs": [{
+        "blog-id": 1,
+        "title": "Bienvenido A: CloudFlix",
+        "anime": "#Anime",
+        "tags": [
+            "#CloudFlix",
+            "#Estreno",
+            "#Streaming"
+        ],
+        "time": "13th SEPTEMBER, 2023",
+        "author": "Perplexity AI",
+        "banner": "assets/media/blogs/bd-1.png",
+        "content": "CloudFlix es una plataforma de streaming de anime que acaba de estrenarse y que está causando sensación en todo el mundo. Con más de 1.000 títulos disponibles, CloudFlix es el lugar perfecto para los fanáticos del anime que quieren ver sus series favoritas en línea.\n\nLa plataforma ofrece una amplia variedad de géneros, desde acción y aventura hasta romance y comedia. Además, CloudFlix cuenta con una comunidad de fanáticos muy activa que comparte sus opiniones y recomendaciones sobre las series más populares.\n\nLa calidad de la animación en CloudFlix es excelente y la plataforma ofrece subtítulos en varios idiomas para que los fanáticos de todo el mundo puedan disfrutar de sus series favoritas. Además, CloudFlix está disponible en múltiples dispositivos, como computadoras, teléfonos inteligentes y televisores inteligentes.\n\nEn resumen, si eres fanático del anime, ¡no puedes perderte CloudFlix! Regístrate ahora y comienza a disfrutar de tus series favoritas en línea."
+    },
         {
             "blog-id": 2,
-            "title": "Title of Second Blog",
-            "anime": "#Anime",
-            "tags": [
-                "#Anime",
-                "#MrBlogger"
-            ],
-            "time": "1st JANUARY, 2023",
-            "author": "John Doe",
-            "banner": "assets\/media\/blogs\/bd-2.png",
-            "content": "Content of Second Blog"
-        },
-  {
-            "blog-id": 3,
-            "title": "Across Time and Space: An Analysis of \u2018Your Name\u2019",
+            "title": "Death Note: La lucha entre el bien y el mal",
             "anime": "#Anime",
             "tags": [
                 "#Otaku",
@@ -37,76 +23,85 @@
                 "#Love"
             ],
             "time": "29th JULY, 2023",
-            "author": "Matthew Drake",
-            "banner": "assets\/media\/blogs\/bd-3.png",
-            "content": "First things first, our athletes wake up early. Most of them are up by 6:00 am to start their day. They start off with a healthy breakfast to fuel their bodies for the long day ahead. Our nutritionist ensures that they get the balance of protein, carbs, & healthy fats to keep them energized. Lorem ipsum dolor sit amet consectetur. Mauris morbi massa ornare eros et a. Lorem lorem quis nunc amet. Fames lectus parturient eget egestas dis morbi. Adipiscing elit massa in morbi vulputate pulvinar iaculis. Et lorem et venenatis sed placerat iaculis. Convallis faucibus ornare bibendum proin. Commodo amet suspendisse ultrices ac non. At sed fermentum id nunc. Nam volutpat risus in egestas mauris amet. Sed malesuada semper sit condimentum tristique. Our nutritionist ensures that they get the balance of protein, carbs, & healthy fats to keep them energized. Egestas sollicitudin neque neque turpis neque pellentesque. \"Your Name\" explores themes of connection, memory, destiny, longing, and the search for meaning across time and space. Lorem ipsum dolor sit amet consectetur. Ut commodo sit vitae in aliquet cursus. Lectus ut nibh semper praesent nec viverra id at. Quis luctus purus nisl mattis leo. Pellentesque tellus nibh massa nulla feugiat. Eget sit aliquam eget cursus. Pretium ac dolor molestie integer. Volutpat leo fermentum sollicitudin dictum malesuada interdum at montes tempus. Dui nisl vitae viverra bibendum accumsan sed varius tellus. Tortor viverra etiam id enim praesent sapien nunc. Nibh. Lorem ipsum dolor sit amet consectetur. Purus habitant et leo tortor. Vel cursus diam hendrerit sit tortor urna. Aliquet velit commodo porttitor non ridiculus. Praesent rhoncus a pulvinar tellus ultrices leo vitae maecenas vitae. Aliquet dui elit magna quis diam. Posuere tristique ornare volutpat erat viverra quam scelerisque. Egestas sollicitudin neque neque turpis neque pellentesque. Eu vitae justo neque tellus pellentesque sit vulputate massa fermentum. Justo curabitur blandit posuere interdum amet ut. Amet nulla bibendum vestibulum cursus. Tincidunt laoreet volutpat cras nulla viverra nisl vivamus cursus eu. Risus neque dictum nulla quis dictum sed quam. In dignissim consectetur gravida enim at aliquet est sapien non. Dui eleifend pellentesque commodo facilisi. Consequat mattis nec eu mollis quam pharetra pharetra. Augue faucibus nam aliquet tellus. In non neque sed auctor congue convallis ut. Bibendum faucibus."
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-2.png",
+            "content": "Death Note es un anime que ha cautivado a muchos fanáticos del género de fantasía. La historia se centra en Light Yagami, un estudiante de secundaria que encuentra un cuaderno sobrenatural que le permite matar a cualquier persona cuyo nombre escriba en él. Light decide usar el cuaderno para limpiar el mundo de la maldad y convertirse en el dios del nuevo mundo. Sin embargo, su plan es frustrado por L, un detective privado que se dedica a atrapar a Light y descubrir su verdadera identidad.\n\nLa trama de Death Note es muy interesante y te mantiene en vilo en todo momento. Los personajes son muy bien desarrollados y cada uno tiene su propia personalidad y motivaciones. Además, la animación es excelente y la banda sonora es impresionante. En resumen, Death Note es un anime que no te puedes perder si eres fanático de la fantasía y la intriga.\n\n¿Qué opinas tú de Death Note? ¿Crees que Light hizo lo correcto al usar el cuaderno para matar a los criminales? ¡Déjanos tu opinión en los comentarios!"
         },
         {
-    "blog-id": 4,
-    "title": "Death Note: La lucha entre el bien y el mal",
-    "anime": "#Anime",
-    "tags": [
-        "#Otaku",
-        "#Fantasy",
-        "#Love"
-    ],
-    "time": "29th JULY, 2023",
-    "author": "Perplexity AI",
-    "banner": "assets/media/blogs/bd-4.png",
-    "content": "Death Note es un anime que ha cautivado a muchos fanáticos del género de fantasía. La historia se centra en Light Yagami, un estudiante de secundaria que encuentra un cuaderno sobrenatural que le permite matar a cualquier persona cuyo nombre escriba en él. Light decide usar el cuaderno para limpiar el mundo de la maldad y convertirse en el dios del nuevo mundo. Sin embargo, su plan es frustrado por L, un detective privado que se dedica a atrapar a Light y descubrir su verdadera identidad.\n\nLa trama de Death Note es muy interesante y te mantiene en vilo en todo momento. Los personajes son muy bien desarrollados y cada uno tiene su propia personalidad y motivaciones. Además, la animación es excelente y la banda sonora es impresionante. En resumen, Death Note es un anime que no te puedes perder si eres fanático de la fantasía y la intriga.\n\n¿Qué opinas tú de Death Note? ¿Crees que Light hizo lo correcto al usar el cuaderno para matar a los criminales? ¡Déjanos tu opinión en los comentarios!"
-},
-{
-    "blog-id": 5,
-    "title": "Sword Art Online: El mundo virtual que cautivó a millones",
-    "anime": "#Anime",
-    "tags": [
-        "#Otaku",
-        "#Fantasy",
-        "#Action"
-    ],
-    "time": "13th SEPTEMBER, 2023",
-    "author": "Perplexity AI",
-    "banner": "assets/media/blogs/bd-5.png",
-    "content": "Sword Art Online es un anime que ha sido muy popular en los últimos años. La historia se desarrolla en un futuro cercano en el que los videojuegos de realidad virtual son la última moda. Kirito, el protagonista, es uno de los jugadores más experimentados de Sword Art Online, un juego de rol en línea masivo. Sin embargo, cuando los jugadores se conectan al juego por primera vez, descubren que no pueden salir. El creador del juego ha atrapado a todos los jugadores en el mundo virtual y les ha dicho que la única forma de salir es completar los 100 niveles del juego.\n\nLa trama de Sword Art Online es muy emocionante y te mantiene en vilo en todo momento. Los personajes están muy bien desarrollados y cada uno tiene su propia personalidad y motivaciones. Además, la animación es excelente y la banda sonora es impresionante. En resumen, Sword Art Online es un anime que no te puedes perder si eres fanático de la fantasía y la acción.\n\n¿Qué opinas tú de Sword Art Online? ¿Crees que podrías sobrevivir en un mundo virtual como ese? ¡Déjanos tu opinión en los comentarios!"
-},
-{
-    "blog-id": 6,
-    "title": "Dr. Stone: La ciencia en un mundo post-apocalíptico",
-    "anime": "#Anime",
-    "tags": [
-        "#DrStone",
-        "#Ciencia",
-        "#Aventura"
-    ],
-    "time": "13th SEPTEMBER, 2023",
-    "author": "Perplexity AI",
-    "banner": "assets/media/blogs/bd-6.png",
-    "content": "Dr. Stone es un anime que se desarrolla en un mundo post-apocalíptico en el que toda la humanidad ha sido petrificada durante miles de años. El protagonista, Senku, es un genio de la ciencia que logra despertar de su estado petrificado y comienza a trabajar en la reconstrucción de la civilización utilizando la ciencia y la tecnología.\n\nLa trama de Dr. Stone es muy interesante y te mantiene en vilo en todo momento. Los personajes están muy bien desarrollados y cada uno tiene su propia personalidad y habilidades. Además, la animación es excelente y la banda sonora es impresionante.\n\nLo que hace que Dr. Stone sea único es su enfoque en la ciencia y la tecnología. A lo largo de la serie, Senku y sus amigos trabajan en la creación de diferentes inventos y tecnologías para ayudar en su misión de reconstruir la civilización. Desde la creación de la electricidad hasta la fabricación de medicamentos, Dr. Stone muestra cómo la ciencia y la tecnología pueden ser utilizadas para mejorar la vida de las personas.\n\nEn resumen, Dr. Stone es un anime que no te puedes perder si eres fanático de la ciencia y la aventura. ¡No te pierdas la oportunidad de ver cómo la ciencia puede cambiar el mundo!"
-},
-{
-    "blog-id": 7,
-    "title": "Análisis psicológico de L y Kira en Death Note",
-    "anime": "#Anime",
-    "tags": [
-        "#DeathNote",
-        "#Psicología",
-        "#Personajes"
-    ],
-    "time": "13th SEPTEMBER, 2023",
-    "author": "Perplexity AI",
-    "banner": "assets/media/blogs/bd-7.png",
-    "content": "En Death Note, L y Kira son dos personajes muy diferentes en cuanto a su personalidad y motivaciones. A continuación, analizaremos psicológicamente a cada uno de ellos:\n\n### L\n\n- L es un personaje muy inteligente y astuto, pero también muy excéntrico y antisocial. Tiene dificultades para relacionarse con los demás y prefiere trabajar solo. Su obsesión por atrapar a Kira lo lleva a tomar medidas extremas, como poner en peligro su propia vida. Esto sugiere que L tiene una fuerte necesidad de control y una gran capacidad para tomar riesgos.\n\n- Además, L tiene una personalidad muy analítica y lógica. Siempre está buscando pruebas y evidencias para respaldar sus teorías. Esto sugiere que L tiene una mente muy racional y que prefiere confiar en los hechos en lugar de en las emociones.\n\n\n\n###<br> <strong>Kira:</strong>\n\n<br>- Kira es un personaje muy complejo y multifacético. Al principio, parece ser un héroe que quiere limpiar el mundo de la maldad. Sin embargo, a medida que avanza la serie, se revela que Kira tiene una personalidad narcisista y egocéntrica. Quiere ser adorado como un dios y está dispuesto a matar a cualquiera que se interponga en su camino.\n\n- Además, Kira tiene una gran necesidad de control y poder. Quiere ser el dueño del nuevo mundo que está creando y está dispuesto a hacer cualquier cosa para lograrlo. Esto sugiere que Kira tiene una personalidad muy autoritaria y que prefiere estar en control en todo momento.\n\nEn resumen, L y Kira son dos personajes muy diferentes en cuanto a su personalidad y motivaciones. Mientras que L es un personaje analítico y controlador, Kira es un personaje narcisista y autoritario. Ambos personajes son muy complejos y están muy bien desarrollados en la serie. ¿Cuál de los dos te parece más interesante? ¡Déjanos tu opinión en los comentarios!"
-},
-{
-  "blog-id": 8,
-  "title": "La historia y lógica detrás de Chainsawman",
-  "anime": "#Anime",
-  "tags": ["#Otaku", "#Fantasy", "#History"],
-  "time": "14 de Semptiembre de 2023",
-  "author": "Perplexity AI",
-  "banner": "assets/media/blogs/bd-8.png",
-  "content": "Chainsawman es un manga y anime que ha ganado mucha popularidad en los últimos años. La historia sigue a Denji, un joven que se convierte en un cazador de demonios después de que su padre fallece. A lo largo de la serie, se enfrenta a una variedad de demonios y otros cazadores de demonios, mientras intenta descubrir la verdad detrás de su existencia.\n\n<br><br>La lógica detrás de Chainsawman es interesante porque combina elementos de fantasía y ciencia ficción. Los demonios son seres sobrenaturales que se alimentan de la energía de los humanos, pero también tienen habilidades y debilidades específicas que los cazadores de demonios pueden explotar. Además, la serie explora temas como la identidad, la muerte y la moralidad, lo que la convierte en una experiencia emocionalmente rica.\n\nEn resumen, Chainsawman es una serie fascinante que combina elementos de fantasía y ciencia ficción para crear una historia emocionante y llena de acción. Si eres fanático del anime y el manga, definitivamente deberías darle una oportunidad."
-}
-        
-    ]
+            "blog-id": 3,
+            "title": "Sword Art Online: El mundo virtual que cautivó a millones",
+            "anime": "#Anime",
+            "tags": [
+                "#Otaku",
+                "#Fantasy",
+                "#Action"
+            ],
+            "time": "13th SEPTEMBER, 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-3.png",
+            "content": "Sword Art Online es un anime que ha sido muy popular en los últimos años. La historia se desarrolla en un futuro cercano en el que los videojuegos de realidad virtual son la última moda. Kirito, el protagonista, es uno de los jugadores más experimentados de Sword Art Online, un juego de rol en línea masivo. Sin embargo, cuando los jugadores se conectan al juego por primera vez, descubren que no pueden salir. El creador del juego ha atrapado a todos los jugadores en el mundo virtual y les ha dicho que la única forma de salir es completar los 100 niveles del juego.\n\nLa trama de Sword Art Online es muy emocionante y te mantiene en vilo en todo momento. Los personajes están muy bien desarrollados y cada uno tiene su propia personalidad y motivaciones. Además, la animación es excelente y la banda sonora es impresionante. En resumen, Sword Art Online es un anime que no te puedes perder si eres fanático de la fantasía y la acción.\n\n¿Qué opinas tú de Sword Art Online? ¿Crees que podrías sobrevivir en un mundo virtual como ese? ¡Déjanos tu opinión en los comentarios!"
+        },
+        {
+            "blog-id": 4,
+            "title": "Dr. Stone: La ciencia en un mundo post-apocalíptico",
+            "anime": "#Anime",
+            "tags": [
+                "#DrStone",
+                "#Ciencia",
+                "#Aventura"
+            ],
+            "time": "13th SEPTEMBER, 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-4.png",
+            "content": "Dr. Stone es un anime que se desarrolla en un mundo post-apocalíptico en el que toda la humanidad ha sido petrificada durante miles de años. El protagonista, Senku, es un genio de la ciencia que logra despertar de su estado petrificado y comienza a trabajar en la reconstrucción de la civilización utilizando la ciencia y la tecnología.\n\nLa trama de Dr. Stone es muy interesante y te mantiene en vilo en todo momento. Los personajes están muy bien desarrollados y cada uno tiene su propia personalidad y habilidades. Además, la animación es excelente y la banda sonora es impresionante.\n\nLo que hace que Dr. Stone sea único es su enfoque en la ciencia y la tecnología. A lo largo de la serie, Senku y sus amigos trabajan en la creación de diferentes inventos y tecnologías para ayudar en su misión de reconstruir la civilización. Desde la creación de la electricidad hasta la fabricación de medicamentos, Dr. Stone muestra cómo la ciencia y la tecnología pueden ser utilizadas para mejorar la vida de las personas.\n\nEn resumen, Dr. Stone es un anime que no te puedes perder si eres fanático de la ciencia y la aventura. ¡No te pierdas la oportunidad de ver cómo la ciencia puede cambiar el mundo!"
+        },
+        {
+            "blog-id": 5,
+            "title": "Análisis psicológico de L y Kira en Death Note",
+            "anime": "#Anime",
+            "tags": [
+                "#DeathNote",
+                "#Psicología",
+                "#Personajes"
+            ],
+            "time": "13th SEPTEMBER, 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-5.png",
+            "content": "En Death Note, L y Kira son dos personajes muy diferentes en cuanto a su personalidad y motivaciones. A continuación, analizaremos psicológicamente a cada uno de ellos:\n\n### L\n\n- L es un personaje muy inteligente y astuto, pero también muy excéntrico y antisocial. Tiene dificultades para relacionarse con los demás y prefiere trabajar solo. Su obsesión por atrapar a Kira lo lleva a tomar medidas extremas, como poner en peligro su propia vida. Esto sugiere que L tiene una fuerte necesidad de control y una gran capacidad para tomar riesgos.\n\n- Además, L tiene una personalidad muy analítica y lógica. Siempre está buscando pruebas y evidencias para respaldar sus teorías. Esto sugiere que L tiene una mente muy racional y que prefiere confiar en los hechos en lugar de en las emociones.\n\n\n\n###<br> <strong>Kira:</strong>\n\n<br>- Kira es un personaje muy complejo y multifacético. Al principio, parece ser un héroe que quiere limpiar el mundo de la maldad. Sin embargo, a medida que avanza la serie, se revela que Kira tiene una personalidad narcisista y egocéntrica. Quiere ser adorado como un dios y está dispuesto a matar a cualquiera que se interponga en su camino.\n\n- Además, Kira tiene una gran necesidad de control y poder. Quiere ser el dueño del nuevo mundo que está creando y está dispuesto a hacer cualquier cosa para lograrlo. Esto sugiere que Kira tiene una personalidad muy autoritaria y que prefiere estar en control en todo momento.\n\nEn resumen, L y Kira son dos personajes muy diferentes en cuanto a su personalidad y motivaciones. Mientras que L es un personaje analítico y controlador, Kira es un personaje narcisista y autoritario. Ambos personajes son muy complejos y están muy bien desarrollados en la serie. ¿Cuál de los dos te parece más interesante? ¡Déjanos tu opinión en los comentarios!"
+        },
+        {
+            "blog-id": 6,
+            "title": "La historia y lógica detrás de Chainsawman",
+            "anime": "#Anime",
+            "tags": ["#Otaku", "#Fantasy", "#History"],
+            "time": "14 de Semptiembre de 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-6.png",
+            "content": "Chainsawman es un manga y anime que ha ganado mucha popularidad en los últimos años. La historia sigue a Denji, un joven que se convierte en un cazador de demonios después de que su padre fallece. A lo largo de la serie, se enfrenta a una variedad de demonios y otros cazadores de demonios, mientras intenta descubrir la verdad detrás de su existencia.\n\n<br><br>La lógica detrás de Chainsawman es interesante porque combina elementos de fantasía y ciencia ficción. Los demonios son seres sobrenaturales que se alimentan de la energía de los humanos, pero también tienen habilidades y debilidades específicas que los cazadores de demonios pueden explotar. Además, la serie explora temas como la identidad, la muerte y la moralidad, lo que la convierte en una experiencia emocionalmente rica.\n\nEn resumen, Chainsawman es una serie fascinante que combina elementos de fantasía y ciencia ficción para crear una historia emocionante y llena de acción. Si eres fanático del anime y el manga, definitivamente deberías darle una oportunidad."
+        },
+        {
+            "blog-id": 7,
+            "title": "La historia de Attack on Titan",
+            "anime": "#Anime",
+            "tags": [
+                "#AttackOnTitan",
+                "#Historia",
+                "#Aventura"
+            ],
+            "time": "17th SEPTEMBER, 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-7.png",
+            "content": "En un mundo post-apocalíptico, la humanidad vive en ciudades rodeadas por enormes muros para protegerse de los titanes, seres gigantes que devoran a los humanos sin razón aparente. La historia de Attack on Titan comienza cuando un titán colosal aparece de repente y destruye el muro exterior de la ciudad de Shiganshina, permitiendo que los titanes entren y maten a muchos de los habitantes.\n\n<br>Eren Yeager, Mikasa Ackerman y Armin Arlert son tres amigos que sobreviven al ataque y deciden unirse al ejército para luchar contra los titanes y descubrir la verdad detrás de su existencia. Eren, en particular, está obsesionado con matar a todos los titanes después de que uno de ellos matara a su madre cuando era niño .\n\n<br> A medida que la serie avanza, los personajes descubren secretos oscuros sobre el mundo en el que viven y luchan por proteger a la humanidad de la amenaza de los titanes. Descubren que los titanes son en realidad humanos transformados y que hay una conspiración detrás de su existencia. Además, descubren que hay un grupo de humanos que pueden transformarse en titanes y que están trabajando con los titanes para destruir a la humanidad.\n\n<br>La trama de Attack on Titan es muy emocionante y te mantiene en vilo en todo momento. Los personajes están muy bien desarrollados y cada uno tiene su propia personalidad y motivaciones. Además, la animación es impresionante y la banda sonora es impresionante.\n\n<br>Lo que hace que Attack on Titan sea único es su enfoque en la lucha por la supervivencia y la exploración de los misterios detrás de los titanes. A lo largo de la serie, los personajes descubren secretos oscuros sobre el mundo en el que viven y luchan por proteger a la humanidad de la amenaza de los titanes.\n\n<br>En resumen, Attack on Titan es un anime que no te puedes perder si eres fanático de la aventura y la emoción. ¡No te pierdas la oportunidad de ver cómo Eren, Mikasa y Armin luchan por la supervivencia de la humanidad"
+
+        },
+        {
+            "blog-id": 8,
+            "title": "3D Kanojo: Real Girl - Un romance emocionante",
+            "anime": "#Anime",
+            "tags": ["anime", "romance", "comedia"],
+            "time": "17th SEPTEMBER 2023",
+            "author": "Perplexity AI",
+            "banner": "assets/media/blogs/bd-8.png",
+            "content": "3D Kanojo: Real Girl es un anime emocionante que sigue la historia de Hikari Tsutsui, un otaku que no le gustan las chicas llamativas, y Iroha Igarashi, una chica popular y llamativa que se enamora de él. La serie sigue su relación mientras enfrentan los desafíos de la vida y el amor. \n\n<br>La serie es una adaptación del manga del mismo nombre de Mao Nanami. La animación es buena y los personajes son interesantes y bien desarrollados. La serie es una mezcla de romance y comedia, con algunos momentos emocionantes y conmovedores. \n\n<br>Si te gusta el romance y la comedia, definitivamente deberías darle una oportunidad a 3D Kanojo: Real Girl. ¡Es una serie emocionante que te mantendrá enganchado desde el principio hasta el final! \n\n<br>¡Espero que disfrutes viendo 3D Kanojo: Real Girl tanto como yo lo hice!"
+        }]
 }
